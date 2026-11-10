@@ -1,0 +1,67 @@
+{
+  "api_key": {
+    "description": "AnimeAPI 密钥 / API key",
+    "type": "string",
+    "default": "",
+    "secret": true,
+    "obvious_hint": true,
+    "hint": "以 ank_ 开头，在 https://animeapi.ai/dashboard/api-keys 创建。新账号免费 3 张，无需绑卡。 Starts with ank_; create one at https://animeapi.ai/dashboard/api-keys."
+  },
+  "model": {
+    "description": "默认模型 / Default model",
+    "type": "string",
+    "default": "anime",
+    "options": ["anime", "ultra", "ultra-max"],
+    "labels": ["anime · $0.003", "ultra · $0.01", "ultra-max · $0.02"],
+    "hint": "每张价格：anime $0.003，ultra $0.01，ultra-max $0.02。 Price per image."
+  },
+  "orientation": {
+    "description": "默认画幅 / Default orientation",
+    "type": "string",
+    "default": "portrait",
+    "options": ["portrait", "square", "landscape"],
+    "labels": ["竖图 portrait", "方图 square", "横图 landscape"],
+    "hint": "所有画幅价格相同。 Same price for every shape."
+  },
+  "allow_nsfw": {
+    "description": "允许 NSFW 输出 / Allow NSFW output",
+    "type": "bool",
+    "default": false,
+    "hint": "默认关闭：被标记的图片会被拒绝并退款，不会发到聊天中。 Off by default: flagged images are refused and refunded."
+  },
+  "enhance": {
+    "description": "自动把提示词改写为标签 / Rewrite prompts into tags",
+    "type": "bool",
+    "default": true,
+    "hint": "anime 模型推荐开启。 Recommended for the anime model."
+  },
+  "cooldown": {
+    "description": "每位用户冷却秒数 / Per-user cooldown (seconds)",
+    "type": "int",
+    "default": 30,
+    "hint": "0 为不限制。 0 disables the limit."
+  },
+  "allow_model_override": {
+    "description": "允许用户用 -m 选择模型 / Let users pick a model with -m",
+    "type": "bool",
+    "default": false,
+    "hint": "默认关闭，避免用户选用更贵的模型。 Off so users cannot choose a more expensive model."
+  },
+  "show_prompt": {
+    "description": "同时发送模型实际收到的标签 / Also send the tags the model received",
+    "type": "bool",
+    "default": false
+  },
+  "language": {
+    "description": "回复语言 / Reply language",
+    "type": "string",
+    "default": "zh",
+    "options": ["zh", "en", "ja"],
+    "labels": ["简体中文", "English", "日本語"]
+  },
+  "timeout": {
+    "description": "等待 AnimeAPI 的秒数 / Timeout (seconds)",
+    "type": "int",
+    "default": 120
+  }
+}
