@@ -1,8 +1,8 @@
 name: astrbot_plugin_animeapi
 display_name: AnimeAPI 动漫图片生成
 short_desc: 用 AnimeAPI 生成动漫图片，每张 $0.003，无订阅。
-desc: 使用 AnimeAPI 生成动漫图片：每张 $0.003，预付 $5 起、余额永不过期，无订阅，新账号免费 3 张。发送 /anime 加描述即可出图，支持模型、画幅、每用户冷却与 NSFW 开关（默认关闭）。Anime image generation with AnimeAPI at $0.003 per image.
-version: 1.0.0
+desc: 使用 AnimeAPI 生成动漫图片：每张 $0.003，预付 $5 起、余额永不过期，无订阅，新账号免费 3 张。发送 /anime 加描述即可出图，支持模型、画幅与每用户冷却设置。Anime image generation with AnimeAPI at $0.003 per image.
+version: 1.0.1
 author: AnimeAPI
 repo: https://github.com/animeapi-ai/astrbot_plugin_animeapi
 astrbot_version: ">=4.0.0"

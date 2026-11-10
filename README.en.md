@@ -33,13 +33,14 @@ Write the prompt in plain words; AnimeAPI rewrites it into tags for the anime mo
 | `api_key` | empty | Your AnimeAPI key |
 | `model` | `anime` | `anime` $0.003, `ultra` $0.01, `ultra-max` $0.02 per image |
 | `orientation` | `portrait` | `portrait`, `square` or `landscape`; same price |
-| `allow_nsfw` | **`false`** | NSFW output is off by default. Flagged images are refused and refunded instead of being sent to the chat |
 | `enhance` | `true` | Rewrite plain prompts into tags (anime model) |
 | `cooldown` | `30` | Seconds each user must wait between images; `0` disables the limit |
 | `allow_model_override` | `false` | Let users choose a model with `-m`. Off so users cannot pick a more expensive model |
 | `show_prompt` | `false` | Also send the tags the model received |
 | `language` | `zh` | Reply language: `zh`, `en` or `ja` |
 | `timeout` | `120` | Seconds to wait for AnimeAPI |
+
+AnimeAPI does not generate adult content. Explicit prompts are refused and not charged.
 
 ## Messages your users may see
 

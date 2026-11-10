@@ -23,12 +23,6 @@
     "labels": ["竖图 portrait", "方图 square", "横图 landscape"],
     "hint": "所有画幅价格相同。 Same price for every shape."
   },
-  "allow_nsfw": {
-    "description": "允许 NSFW 输出 / Allow NSFW output",
-    "type": "bool",
-    "default": false,
-    "hint": "默认关闭：被标记的图片会被拒绝并退款，不会发到聊天中。 Off by default: flagged images are refused and refunded."
-  },
   "enhance": {
     "description": "自动把提示词改写为标签 / Rewrite prompts into tags",
     "type": "bool",

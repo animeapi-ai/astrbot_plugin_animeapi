@@ -33,13 +33,14 @@ https://github.com/animeapi-ai/astrbot_plugin_animeapi
 | `api_key` | 空 | AnimeAPI 密钥 |
 | `model` | `anime` | 每张 `anime` $0.003、`ultra` $0.01、`ultra-max` $0.02 |
 | `orientation` | `portrait` | `portrait`（竖）、`square`（方）、`landscape`（横），价格相同 |
-| `allow_nsfw` | **`false`** | 默认关闭 NSFW 输出。被标记的图片会被拒绝并退款，不会发到聊天中 |
 | `enhance` | `true` | 自动把提示词改写为标签（anime 模型） |
 | `cooldown` | `30` | 每位用户两次生成之间的间隔（秒），`0` 为不限制 |
 | `allow_model_override` | `false` | 是否允许用户用 `-m` 选择模型。默认关闭，避免用户选用更贵的模型 |
 | `show_prompt` | `false` | 同时发送模型实际收到的标签 |
 | `language` | `zh` | 回复语言：`zh`、`en`、`ja` |
 | `timeout` | `120` | 等待 AnimeAPI 的秒数 |
+
+AnimeAPI 不生成成人内容。露骨的提示词会被拒绝，且不收费。
 
 ## 用户可能看到的提示
 

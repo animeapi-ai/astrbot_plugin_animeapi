@@ -51,13 +51,11 @@ class AnimeAPIPlugin(Star):
         return " ".join(tokens).strip(), model, orientation
 
     async def _generate(self, prompt: str, model: str, orientation: str) -> dict:
-        allow_nsfw = bool(self.config.get("allow_nsfw", False))
         payload = {
             "prompt": prompt,
             "model": model,
             "orientation": orientation,
             "enhance": bool(self.config.get("enhance", True)),
-            "allowNSFW": allow_nsfw,
         }
         headers = {"Authorization": f"Bearer {str(self.config.get('api_key', '')).strip()}"}
         timeout = aiohttp.ClientTimeout(total=int(self.config.get("timeout", 120) or 120))
@@ -79,8 +77,6 @@ class AnimeAPIPlugin(Star):
                     return data
                 error = data.get("error")
                 message = error if isinstance(error, str) else (error or {}).get("message") or f"HTTP {status}"
-                if not allow_nsfw and "nsfw" in message.lower():
-                    raise AnimeAPIError(message, status, "NSFW_BLOCKED")
                 retryable = data.get("retryable") is True or status in (500, 503)
                 if retryable and attempt == 1:
                     try:
@@ -152,8 +148,6 @@ class AnimeAPIPlugin(Star):
                 reply = self._text("no_balance")
             elif exc.status == 401:
                 reply = self._text("invalid_key")
-            elif exc.code == "NSFW_BLOCKED":
-                reply = self._text("blocked_nsfw")
             elif exc.code in ("MODERATION_BLOCKED", "PROVIDER_REJECTED"):
                 reply = self._text("rejected", reason=exc.message)
             elif exc.status in (429, 503):

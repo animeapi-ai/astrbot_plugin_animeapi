@@ -2,13 +2,12 @@
   "metadata": {
     "display_name": "AnimeAPI 动漫图片生成",
     "short_desc": "用 AnimeAPI 生成动漫图片，每张 $0.003，无订阅。",
-    "desc": "使用 AnimeAPI 生成动漫图片：每张 $0.003，预付 $5 起、余额永不过期，无订阅，新账号免费 3 张。发送 /anime 加描述即可出图，支持模型、画幅、每用户冷却与 NSFW 开关（默认关闭）。"
+    "desc": "使用 AnimeAPI 生成动漫图片：每张 $0.003，预付 $5 起、余额永不过期，无订阅，新账号免费 3 张。发送 /anime 加描述即可出图，支持模型、画幅与每用户冷却设置。"
   },
   "config": {
     "api_key": { "description": "API 密钥", "hint": "以 ank_ 开头，在 https://animeapi.ai/dashboard/api-keys 创建。新账号免费 3 张，无需绑卡。" },
     "model": { "description": "默认模型", "hint": "每张价格：anime $0.003，ultra $0.01，ultra-max $0.02。" },
     "orientation": { "description": "默认画幅", "hint": "所有画幅价格相同。", "labels": ["竖图", "方图", "横图"] },
-    "allow_nsfw": { "description": "允许 NSFW 输出", "hint": "默认关闭：被标记的图片会被拒绝并退款，不会发到聊天中。" },
     "enhance": { "description": "自动把提示词改写为标签", "hint": "anime 模型推荐开启。" },
     "cooldown": { "description": "每位用户冷却秒数", "hint": "0 为不限制。" },
     "allow_model_override": { "description": "允许用户用 -m 选择模型", "hint": "默认关闭，避免用户选用更贵的模型。" },

@@ -2,13 +2,12 @@
   "metadata": {
     "display_name": "AnimeAPI Image Generation",
     "short_desc": "Anime images with AnimeAPI at $0.003 per image, no subscription.",
-    "desc": "Generate anime images with AnimeAPI: $0.003 per image, prepaid from $5, balance never expires, no subscription, 3 free images for new accounts. Send /anime and a description. Model, orientation, per-user cooldown and an NSFW switch (off by default)."
+    "desc": "Generate anime images with AnimeAPI: $0.003 per image, prepaid from $5, balance never expires, no subscription, 3 free images for new accounts. Send /anime and a description. Model, orientation and per-user cooldown settings."
   },
   "config": {
     "api_key": { "description": "API key", "hint": "Starts with ank_. Create one at https://animeapi.ai/dashboard/api-keys. New accounts get 3 free images, no card." },
     "model": { "description": "Default model", "hint": "Price per image: anime $0.003, ultra $0.01, ultra-max $0.02." },
     "orientation": { "description": "Default orientation", "hint": "Same price for every shape.", "labels": ["Portrait", "Square", "Landscape"] },
-    "allow_nsfw": { "description": "Allow NSFW output", "hint": "Off by default: flagged images are refused and refunded instead of being sent." },
     "enhance": { "description": "Rewrite prompts into tags", "hint": "Recommended for the anime model." },
     "cooldown": { "description": "Per-user cooldown (seconds)", "hint": "0 disables the limit." },
     "allow_model_override": { "description": "Let users pick a model with -m", "hint": "Off so users cannot choose a more expensive model." },
